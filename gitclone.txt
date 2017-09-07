@@ -1,0 +1,29 @@
+ 
+from git import Repo
+import tarfile
+import os
+import glob,os
+
+file1=Repo.clone_from('https://github.com/monimani/project-1/','bb1')
+print file1
+
+tar = tarfile.open("sam.tar", "w")
+location="H:/moni/project-1"
+os.chdir(location)
+for file in glob.glob("*"):
+    print(file)
+    tar.add(file)
+        
+  
+    
+tar.close() 
+ 
+ 
+os.cwd()+""
+ 
+
+
+
+repo=Repo("path")
+
+repo.archive(open(join(rw_dir, 'archived_file.zip'), 'wb'))
